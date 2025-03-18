@@ -60,7 +60,9 @@ class PatchAutoEncoderGrader(Grader):
             losses.append(loss.item())
         mean_loss = sum(losses) / len(losses)
         print("Validation loss:", mean_loss)
-        return self.normalize_score(mean_loss, *self.VALIDATION_LOSS_BOUND)
+        normalized_score = self.normalize_score(mean_loss, *self.VALIDATION_LOSS_BOUND)
+        print("normalized score", normalized_score)
+        return normalized_score
 
 
 class BSQPatchAutoEncoderGrader(PatchAutoEncoderGrader):

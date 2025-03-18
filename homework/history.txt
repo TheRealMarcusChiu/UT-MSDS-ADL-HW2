@@ -1,0 +1,544 @@
+  765  git status
+  766  vim .gitignore
+  767  git status
+  768  git add .
+  769  git commit -am
+  770  git commit -am "andy"
+  771  which zip
+  772  cd ..
+  773  zip -r test.zip ANDY/
+  774  ls
+  775  mv test.zip UT-MSDS-DL-HW3/
+  776  ls
+  777  cd Desktop/
+  778  ls
+  779  cd ANDY/
+  780  ls
+  781  cd DL4/
+  782  ls
+  783  cd homework4/
+  784  ls
+  785  cd ..
+  786  ls
+  787  cd ..
+  788  ls
+  789  cd ..
+  790  ls
+  791  cd UT-MSDS-DL-HW2/
+  792  ls
+  793  cd ..
+  794  cd UT-MSDS-DL-HW3/
+  795  ls
+  796  pwd
+  797  mv test.zip ../
+  798  cd ..
+  799  ls
+  800  pwd
+  801  cd Desktop/
+  802  ls
+  803  cd ANDY/
+  804  ls
+  805  cd DL4/
+  806  ls
+  807  cd homework4/
+  808  ls
+  809  python3 -m homework.train_planner --model_name cnn_planner
+  810  ls
+  811  cd Desktop/
+  812  ls
+  813  mkdir UT-MSDS-DL-HW4
+  814  cd UT-MSDS-DL-HW4/
+  815  ls
+  816  git clone git@github.com:TheRealMarcusChiu/UT-MSDS-DL-HW4.git
+  817  ls
+  818  cd ..
+  819  rm -rf UT-MSDS-DL-HW4/
+  820  git clone git@github.com:TheRealMarcusChiu/UT-MSDS-DL-HW4.git
+  821  cd UT-MSDS-DL-HW4/
+  822  ls
+  823  curl -s -L https://www.cs.utexas.edu/~bzhou/dl_class/drive_data.zip -o ./drive_data.zip && unzip -qo drive_data.zip
+  824  ls
+  825  git pull
+  826  python3 -m homework.train_planner --model_name mlp_planner
+  827  python3 -m grader homework -v
+  828  git pull
+  829  python3 -m homework.train_planner --model_name mlp_planner
+  830  python3 -m grader homework -v
+  831  git pull
+  832  python3 -m homework.train_planner --model_name mlp_planner
+  833  git pull
+  834  python3 -m homework.train_planner --model_name mlp_planner
+  835  python3 -m grader homework -v
+  836  git pull
+  837  python3 -m homework.train_planner --model_name transformer_planner
+  838  python3 -m homework.train_planner --model_name cnn_planner
+  839  python3 -m grader homework -v
+  840  git pull
+  841  python3 -m homework.train_planner --model_name transformer_planner
+  842  python3 -m grader homework -v
+  843  python3 -m homework.train_planner --model_name transformer_planner
+  844  python3 -m homework.train_planner --model_name transformer_planner --num_epoch=40
+  845  python3 -m grader homework -v
+  846  pip install
+  847  pip install -r requirements.txt
+  848  python3 -m grader homework -v
+  849  git pull
+  850  python3 -m homework.train_planner_cnn
+  851  git pull
+  852  python3 -m homework.train_planner_cnn
+  853  python3 -m homework.train_planner_cnn --num_epoch=25
+  854  python3 -m grader homework -v
+  855  git pull
+  856  python3 -m homework.train_planner_cnn --num_epoch=25
+  857  python3 -m grader homework -v
+  858  git pull
+  859  python3 -m homework.train_planner_cnn --num_epoch=25
+  860  python3 -m homework.train_planner_cnn --num_epoch=15
+  861  python3 -m grader homework -v
+  862  git pull
+  863  python3 bundle.py homework mrc5225
+  864  git add .
+  865  git status
+  866  git restore --staged drive_data.zip
+  867  rm drive_data.zip
+  868  git status
+  869  git reset HEAD -- .
+  870  git status
+  871  rm -rf logs/
+  872  git add .
+  873  git commit -am "initial commit"
+  874  git push
+  875  vim /etc/ssh/sshd_config
+  876  sudo vim /etc/ssh/sshd_config
+  877  history systemctl
+  878  history | grep systemctl
+  879  history | grep systemd
+  880  sudo systemctl restart ssh
+  881  sudo passwd
+  882  sudo passwd root
+  883  sudo su
+  884  sudo passwd marcuschiu
+  885  sudo -i
+  886  sudo systemctl restart ssh
+  887  sudo su
+  888  ls
+  889  cd Desktop
+  890  ls
+  891  cd ANDY
+  892  ls
+  893  mkdir ADL1
+  894  cd
+  895  ls
+  896  cd Desktop/ANDY
+  897  ls
+  898  cd ADL1
+  899  git clone https://github.com/andresperez120/Low-Memory-Training-and-Inference.git
+  900  git status
+  901  ls
+  902  cd Low-Memory-Training-and-Inference
+  903  git status
+  904  git pull origin main
+  905  ls
+  906  python3 -m homework.stats bignet
+  907  pip3 install -r requirements.txt
+  908  python3 -m homework.stats bignet
+  909  python3 -m homework.stats bignet half_precision
+  910  python3 -m homework.compare bignet half_precision
+  911  python3 -m homework.stats bignet lora
+  912  python3 -m homework.compare bignet lora
+  913  python3 -m homework.fit lora
+  914  python3 -m solution.stats bignet low_precision
+  915  python3 -m homework.stats bignet low_precision
+  916  python3 -m grader homework -v
+  917  python3 -m homework.fit qlora
+  918  python3 -m grader homework -v
+  919  git pull origin main
+  920  python3 -m homework.stats bignet lora
+  921  python3 -m homework.compare bignet lora
+  922  python3 -m homework.fit lora
+  923  python3 -m grader homework -v
+  924  git pull origin main
+  925  python3 -m homework.fit lora
+  926  python3 -m homework.fit qlora
+  927  git pull origin main
+  928  python3 -m homework.fit lora
+  929  python3 -m homework.fit qlora
+  930  git pull origin main
+  931  python3 -m homework.fit lora
+  932  python3 -m grader homework -v
+  933  git pull origin main
+  934  python3 -m grader homework -v
+  935  python3 bundle.py homework aap4786
+  936  python3 -m grader aap4786.zip
+  937  git status
+  938  git add aap4786.zip
+  939  git commit -m "submission"
+  940  git push origin main
+  941  ls
+  942  cd Desktop/
+  943  ls
+  944  cd ANDY/
+  945  ls
+  946  cd ADL1/
+  947  ls
+  948  cd Low-Memory-Training-and-Inference/
+  949  ls
+  950  sudo su -
+  951  ip addr
+  952  history
+  953  ls
+  954  history
+  955  sudo su -
+  956  history
+  957  ls
+  958  cd Desktop/ANDY/ADL1/Low-Memory-Training-and-Inference/
+  959  python3 -m homework.stats bignet
+  960  python3 -m grader homework -v
+  961  cd
+  962  cd Desktop/
+  963  ls
+  964  git clone https://github.com/TheRealMarcusChiu/UT-MSDS-ADL-HW1.git
+  965  ls
+  966  cd UT-MSDS-ADL-HW1/
+  967  ls
+  968  python3 -m grader homework -v
+  969  cd ..
+  970  cd ANDY/ADL1/Low-Memory-Training-and-Inference/
+  971  ls
+  972  python3 -m grader homework -v
+  973  cd homework/
+  974  ls
+  975  cat half_precision.py
+  976  ls
+  977  cat lora.py
+  978  ls
+  979  cat qlora.py
+  980  cat low_precision.py
+  981  history
+  982  python3 bundle.py homework mrc5225
+  983  ls
+  984  pwd
+  985  python3 -m grader mrc5225.zip
+  986  ls
+  987  cd Desktop
+  988  ls
+  989  cd ANDY
+  990  ls
+  991  mkdir ADL2
+  992  ls
+  993  cd ADL2
+  994  git clone https://github.com/andresperez120/AR-Image-Generation.git
+  995  cd AR-Image-Generation
+  996  wget https://utexas.box.com/shared/static/qubjm5isldqvyimfj9rsmbnvnbezwcv4.zip -O supertux_data.zip
+  997  unzip supertux_data.zip
+  998  pip install -r requirements.txt
+  999  python -m homework.train PatchAutoEncoder
+ 1000  pip uninstall numpy
+ 1001  python -m venv venv_andy
+ 1002  source venv_andy/bin/activate
+ 1003  pip install numpy==1.26.4
+ 1004  pip install -r requirements.txt
+ 1005  python -m homework.train PatchAutoEncoder
+ 1006  pip install tensorboard
+ 1007  pip uninstall numpy
+ 1008  pip install numpy==1.26.4
+ 1009  python -m homework.train PatchAutoEncoder
+ 1010  tensorboard --logdir logs
+ 1011  pip install tensorflow
+ 1012  tensorboard --logdir logs
+ 1013  python3 -m grader
+ 1014  python3 grader -v
+ 1015  python3 -m grader-v
+ 1016  python3 -m grader -v
+ 1017  ls
+ 1018  cd Desktop
+ 1019  ls
+ 1020  cd ANDY
+ 1021  ls
+ 1022  cd ADL2
+ 1023  ls
+ 1024  cd AR-Image-Generation
+ 1025  ls
+ 1026  git pull origin main
+ 1027  python -m homework.train BSQPatchAutoEncoder
+ 1028  python -m venv venv_andy
+ 1029  source venv_andy/bin/activate
+ 1030  python -m homework.train BSQPatchAutoEncoder
+ 1031  git pull
+ 1032  python -m homework.train BSQPatchAutoEncoder
+ 1033  git pull
+ 1034  python -m homework.train BSQPatchAutoEncoder
+ 1035  git pull
+ 1036  python -m homework.train BSQPatchAutoEncoder
+ 1037  git pull
+ 1038  python -m homework.train BSQPatchAutoEncoder
+ 1039  python -m homework.tokenize checkpoints/BSQPatchAutoEncoder.pth data/tokenized_train.pth data/train/*.jpg
+ 1040  ls -l checkpoints/
+ 1041  python -m homework.tokenize checkpoints/2025-03-14_16-35-18_BSQPatchAutoEncoder.pth data/tokenized_train.pth data/train/*.jpg
+ 1042  python -m homework.tokenize checkpoints/2025-03-14_16-35-18_BSQPatchAutoEncoder.pth data/tokenized_valid.pth data/valid/*.jpg
+ 1043  du -hs data/tokenized_train.pth
+ 1044  git pull
+ 1045  python -m homework.train AutoregressiveModel
+ 1046  git pull
+ 1047  python -m homework.train AutoregressiveModel
+ 1048  git pull
+ 1049  python -m homework.train AutoregressiveModel
+ 1050  git pull
+ 1051  python -m homework.train AutoregressiveModel
+ 1052  ls -l data/
+ 1053  git pull
+ 1054  python -m homework.train AutoregressiveModel
+ 1055  git pull
+ 1056  python -m homework.train AutoregressiveModel
+ 1057  git pull
+ 1058  python -m homework.train AutoregressiveModel
+ 1059  git pull
+ 1060  python -m homework.train AutoregressiveModel
+ 1061  mkdir -p test_generated_images
+ 1062  ls
+ 1063  python -m homework.generation homework/BSQPatchAutoEncoder.pth homework/AutoregressiveModel.pth 3 test_generated_images/
+ 1064  ls -l test_generated_images/
+ 1065  python -m homework.generation homework/BSQPatchAutoEncoder.pth homework/AutoregressiveModel.pth 8 test_generated_images_8/v
+ 1066  python -m homework.generation homework/BSQPatchAutoEncoder.pth homework/AutoregressiveModel.pth 8 test_generated_images_8/
+ 1067  mkdir -p test_generated_images_8
+ 1068  python -m homework.generation homework/BSQPatchAutoEncoder.pth homework/AutoregressiveModel.pth 8 test_generated_images_8/
+ 1069  ls -l test_generated_images_8/
+ 1070  rm -rf test_generated_images/
+ 1071  ls
+ 1072  cd data
+ 1073  ls
+ 1074  cd ..
+ 1075  ls -l data
+ 1076  ls -l test_generated_images_8
+ 1077  rm -rf test_generated_images_8/
+ 1078  ls
+ 1079  cd homework
+ 1080  ls
+ 1081  history
+ 1082  ls
+ 1083  cd Desktop/ANDY/ADL2/AR-Image-Generation/
+ 1084  python3 -m grader -v
+ 1085  history
+ 1086  sudo adduser andy
+ 1087  ls
+ 1088  cd Desktop/
+ 1089  ls
+ 1090  sudo su -
+ 1091  ls
+ 1092  cd Desktop/Andy
+ 1093  cd Desktop/ANDY
+ 1094  ls
+ 1095  cd ADL2
+ 1096  ls
+ 1097  cd AR-Image-Generation
+ 1098  ls
+ 1099  ls -l checkpoints
+ 1100  ls -l homework
+ 1101  sudo chown -R andy:andy directory
+ 1102  sudo cho
+ 1103  ls -l checkpoin
+ 1104  ls
+ 1105  cd ..
+ 1106  sudo chown -R andy:andy AR-Image-Generation
+ 1107  ls
+ 1108  cd AR-Image-Generation
+ 1109  git pull origin main
+ 1110  git config --global --add safe.directory /home/marcuschiu/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1111  git pull origin main
+ 1112  sudo chown -R andy:andy .git/
+ 1113  git pull origin main
+ 1114  whoami
+ 1115  su - andy
+ 1116  sudo chmod -R 755 /home/marcuschiu/Desktop/ANDY
+ 1117  sudo chown -R andy:andy /home/marcuschiu/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1118  su - andy
+ 1119  sudo cp -r /home/marcuschiu/Desktop/ANDY/ADL2/AR-Image-Generation /home/andy/
+ 1120  sudo chown -R andy:andy /home/andy/AR-Image-Generation
+ 1121  su - andy
+ 1122  sudo apt install python3-pip
+ 1123  su - andy
+ 1124  cd ~/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1125  ls -l venv_andy
+ 1126  git log -1
+ 1127  su - andy
+ 1128  cd ~/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1129  source venv_andy/bin/activate
+ 1130  python3 -m grader aap4786.zip
+ 1131  sudo cp /home/andy/AR-Image-Generation/aap4786.zip .
+ 1132  sudo chown marcuschiu:marcuschiu aap4786.zip
+ 1133  ls -l aap4786.zip
+ 1134  python3 -m grader aap4786.zip
+ 1135  ls -l homework/PatchAutoEncoder.pth
+ 1136  python3 -m homework.train PatchAutoEncoder --validate_only
+ 1137  python -m homework.train PatchAutoEncoder
+ 1138  sudo mkdir -p logs
+ 1139  sudo chown -R marcuschiu:marcuschiu logs
+ 1140  python -m homework.train PatchAutoEncoder
+ 1141  sudo mkdir -p checkpoints
+ 1142  sudo chown -R marcuschiu:marcuschiu checkpoints
+ 1143  python -m homework.train PatchAutoEncoder
+ 1144  sudo chown -R marcuschiu:marcuschiu homework/
+ 1145  cp checkpoints/2025-03-12_15-47-38_PatchAutoEncoder.pth homework/PatchAutoEncoder.pth
+ 1146  ls -l homework/PatchAutoEncoder.pth
+ 1147  su - andy
+ 1148  cd ~/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1149  sudo cp /home/andy/AR-Image-Generation/aap4786.zip .
+ 1150  sudo chown marcuschiu:marcuschiu aap4786.zip
+ 1151  python3 -m grader aap4786.zip
+ 1152  python3 -m grader app4786.zip
+ 1153  su - andy
+ 1154  cd ~/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1155  sudo cp /home/andy/AR-Image-Generation/aap4786.zip
+ 1156  sudo cp /home/andy/AR-Image-Generation/aap4786.zip .
+ 1157  sudo chown marcuschiu:marcuschiu aap4786.zip
+ 1158  python3 -m grader aap4786.zip
+ 1159  nano homewoork/ae.py
+ 1160  nano homework/ae.py
+ 1161  python -m homework.train PatchAutoEncoder
+ 1162  git pull origin main
+ 1163  nano homework/ae.py
+ 1164  python -m homework.train PatchAutoEncoder
+ 1165  nano homework/ae.py
+ 1166  su - andy
+ 1167  cd ~/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1168  nano homework/ae.py
+ 1169  sudo cp /home/andy/AR-Image-Generation/homework/ae.py ~/Desktop/ANDY/ADL2/AR-Image-Generation/homework/ae.py
+ 1170  cd Desktop/Andy
+ 1171  ls
+ 1172  cd Desktop
+ 1173  ls
+ 1174  cd ANDY
+ 1175  ls
+ 1176  cd ADL2
+ 1177  ls
+ 1178  cd AR-Image-Generation
+ 1179  bin/activate/venv_andy
+ 1180  ls
+ 1181  bin/activate/venv_andy
+ 1182  sudo cp /home/andy/AR-Image-Generation/homework/ae.py ~/Desktop/ANDY/ADL2/AR-Image-Generation/homework/ae.py
+ 1183  sudo chown marcuschiu:marcuschiu ~/Desktop/ANDY/ADL2/AR-Image-Generation/homework/ae.py
+ 1184  nano homework/ae.py
+ 1185  source venv_andy/bin/activate
+ 1186  python -m homework.train PatchAutoEncoder
+ 1187  sudo chown -R marcuschiu:marcuschiu ~/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1188  git config user.name andresaperez120
+ 1189  git config user.email andresaperez120@gmail.com
+ 1190  git pull origin main
+ 1191  git config user.name andresperez120
+ 1192  git config user.email andresaperez120@gmail.com
+ 1193  git pull origin main
+ 1194  git stash
+ 1195  git pull origin main
+ 1196  git stash pop
+ 1197  python -m homework.train PatchAutoEncoder
+ 1198  git pull origin main
+ 1199  git stash
+ 1200  git pull origin main
+ 1201  git stash pop
+ 1202  python -m homework.train PatchAutoEncoder
+ 1203  nano homework/ae.py
+ 1204  cp checkpoints/2025-03-16_*_PatchAutoEncoder.pth homework/PatchAutoEncoder.pth
+ 1205  ls -l checkpoints/2025-03-16*
+ 1206  cp checkpoints/2025-03-16_20-27-30_PatchAutoEncoder.pth homework/PatchAutoEncoder.pth
+ 1207  su - andy
+ 1208  cd ~/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1209  sudo cp /home/andy/AR-Image-Generation/aap4786.zip .
+ 1210  sudo chown marcuschiu:marcuschiu aap4786.zip
+ 1211  python3 -m grader aap4786.zip
+ 1212  nano homework/ae.py
+ 1213  cat grader/tests.py
+ 1214  cat homework/bsq.py
+ 1215  git pull origin main
+ 1216  git stash
+ 1217  git pull origin main
+ 1218  git stash pop
+ 1219  python -m homework.train PatchAutoEncoder
+ 1220  cat homework/ae.py
+ 1221  git pull origin main
+ 1222  git stash
+ 1223  git pull origin main
+ 1224  git stash pop
+ 1225  python -m homework.train PatchAutoEncoder
+ 1226  python -m homework.train PatchAutoEncoder --epochs 10
+ 1227  python -m homework.train PatchAutoEncoder --epochs 3
+ 1228  su - andy
+ 1229  cd ~/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1230  sudo cp /home/andy/AR-Image-Generation/aap4786.zip .
+ 1231  sudo chown marcuschiu:marcuschiu aap4786.zip
+ 1232  python3 -m grader aap4786.zip
+ 1233  ls -l ~/Desktop/ANDY/ADL2/AR-Image-Generation/homework/PatchAutoEncoder.pth
+ 1234  ls -t checkpoints/*PatchAutoEncoder.pth | head -1
+ 1235  cp $(ls -t checkpoints/*PatchAutoEncoder.pth | head -1) homework/PatchAutoEncoder.pth
+ 1236  sudo chown marcuschiu:marcuschiu homework/PatchAutoEncoder.pth
+ 1237  git pull origin main
+ 1238  git stash
+ 1239  git pull origin main
+ 1240  python -m homework.train PatchAutoEncoder --epochs 3
+ 1241  su - andy
+ 1242  cd ~/Desktop/ANDY/ADL2/AR-Image-Generation
+ 1243  sudo cp /home/andy/AR-Image-Generation/aap4786.zip .
+ 1244  sudo chown marcuschiu:marcuschiu aap4786.zip
+ 1245  python3 -m grader aap4786.zip
+ 1246  git stash
+ 1247  git pull origin main
+ 1248  python -m homework.train PatchAutoEncode
+ 1249  python -m homework.train PatchAutoEncoder
+ 1250  cat homework/ae.py
+ 1251  git pull origin main
+ 1252  python -m homework.train PatchAutoEncoder
+ 1253  python -m homework.train PatchAutoEncoder --epochs 1
+ 1254  su - andy
+ 1255  sudo cp /home/andy/AR-Image-Generation/aap4786.zip .
+ 1256  sudo chown marcuschiu:marcuschiu aap4786.zip
+ 1257  python3 -m grader aap4786.zip
+ 1258  ls
+ 1259  ls -l checkpoints
+ 1260  ls -l aap4786.zip
+ 1261  sudo chmod +x checkpoints/*PatchAutoEncoder.pth
+ 1262  sudo chmod +x homework/PatchAutoEncoder.pth
+ 1263  ls -l checkpoints/*PatchAutoEncoder.pth
+ 1264  ls -l homework/PatchAutoEncoder.pth
+ 1265  cp checkpoints/2025-03-16_21-01-30_PatchAutoEncoder.pth homework/PatchAutoEncoder.pth
+ 1266  sudo chmod +x homework/PatchAutoEncoder.pth
+ 1267  sudo chown marcuschiu:marcuschiu homework/PatchAutoEncoder.pth
+ 1268  su - andy
+ 1269  sudo cp /home/andy/AR-Image-Generation/aap4786.zip .
+ 1270  sudo chown marcuschiu:marcuschiu aap4786.zip
+ 1271  python3 -m grader aap4786.zippython3 -m grader aap4786.zip
+ 1272  python3 -m grader aap4786.zip
+ 1273  ls
+ 1274  ls -l checkpoints
+ 1275  mkdir -p checkpoints/old
+ 1276  mv checkpoints/2025-03-*_PatchAutoEncoder.pth checkpoints/old/
+ 1277  mv checkpoints/2025-03-14_16-35-18_BSQPatchAutoEncoder.pth checkpoints/
+ 1278  cp checkpoints/old/2025-03-16_21-01-30_PatchAutoEncoder.pth checkpoints/PatchAutoEncoder.pth
+ 1279  ls -l checkpoints
+ 1280  sudo chmod +x checkpoints/PatchAutoEncoder.pth
+ 1281  sudo chown marcuschiu:marcuschiu checkpoints/PatchAutoEncoder.pth
+ 1282  cp checkpoints/PatchAutoEncoder.pth homework/PatchAutoEncoder.pth
+ 1283  sudo chmod +x homework/PatchAutoEncoder.pth
+ 1284  sudo chown marcuschiu:marcuschiu homework/PatchAutoEncoder.pth
+ 1285  ls -l checkpoints
+ 1286  ls -l checkpoints/*.pth
+ 1287  ls -l homework/*.pth
+ 1288  su - andy
+ 1289  sudo cp ~/Desktop/ANDY/ADL2/AR-Image-Generation/homework/PatchAutoEncoder.pth /home/andy/AR-Image-Generation/homework/
+ 1290  sudo cp ~/Desktop/ANDY/ADL2/AR-Image-Generation/checkpoints/PatchAutoEncoder.pth /home/andy/AR-Image-Generation/checkpoints/
+ 1291  sudo chown andy:andy /home/andy/AR-Image-Generation/homework/PatchAutoEncoder.pth
+ 1292  sudo chown andy:andy /home/andy/AR-Image-Generation/checkpoints/PatchAutoEncoder.pth
+ 1293  sudo chmod +x /home/andy/AR-Image-Generation/homework/PatchAutoEncoder.pth
+ 1294  sudo chmod +x /home/andy/AR-Image-Generation/checkpoints/PatchAutoEncoder.pth
+ 1295  rm -f ~/Desktop/ANDY/ADL2/AR-Image-Generation/aap4786.zip
+ 1296  sudo rm -f /home/andy/AR-Image-Generation/aap4786.zip
+ 1297  sudo rm -f /home/andy/AR-Image-Generation/app4786.zip
+ 1298  su - andy
+ 1299  sudo cp /home/andy/AR-Image-Generation/aap4786.zip .
+ 1300  sudo chown marcuschiu:marcuschiu aap4786.zip
+ 1301  python3 -m grader aap4786.zip
+ 1302  mkdir temp
+ 1303  cd temp
+ 1304  unzip ../aap4786.zip
+ 1305  grep -r "marcuschiu" .
+ 1306  ls -la
+ 1307  rm ../aap4786.zip
+ 1308  su - andy

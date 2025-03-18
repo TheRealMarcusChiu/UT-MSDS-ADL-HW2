@@ -124,6 +124,9 @@ def train(model_name_or_path: str, epochs: int = 5, batch_size: int = 64):
     else:
         model_name = model_name_or_path
         if model_name in patch_models:
+            # print('HELLO WORLD - TWO')
+            # print(model_name)
+            # print(patch_models[model_name])
             model = patch_models[model_name]()
         elif model_name in ar_models:
             model = ar_models[model_name]()
