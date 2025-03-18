@@ -76,7 +76,7 @@ class AutoregressiveModel(torch.nn.Module, Autoregressive):
         # transformed_3 = self.transformer_3(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(h * w).to(x.device))
         # transformed_2 = self.transformer_2(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(h * w).to(x.device))
         transformed = self.transformer(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(h * w).to(x.device))
-        output = self.linear_layer(transformed)
+        output = self.output_proj(transformed)
         return output.reshape(B, h, w, -1), {}
 
     def generate(self, B: int = 1, h: int = 30, w: int = 20, device=None) -> torch.Tensor:
@@ -87,5 +87,5 @@ class AutoregressiveModel(torch.nn.Module, Autoregressive):
             # transformed_3 = self.transformer_3(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(t).to(device))
             # transformed_2 = self.transformer_2(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(t).to(device))
             transformed = self.transformer(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(t).to(device))
-            zeroes[:, i] = torch.multinomial(torch.nn.functional.softmax(self.linear_layer(transformed[:, i, :]), dim=-1), 1).squeeze(-1)
+            zeroes[:, i] = torch.multinomial(torch.nn.functional.softmax(self.output_proj(transformed[:, i, :]), dim=-1), 1).squeeze(-1)
         return zeroes.reshape(B, h, w)
