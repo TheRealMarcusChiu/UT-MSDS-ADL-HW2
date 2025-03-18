@@ -60,28 +60,32 @@ class AutoregressiveModel(torch.nn.Module, Autoregressive):
         self.d_latent = d_latent
         self.n_tokens = n_tokens
         self.embedding = torch.nn.Embedding(n_tokens, d_latent)
+        self.transformer_3 = torch.nn.TransformerEncoderLayer(d_model=d_latent, nhead=16, dim_feedforward=128, dropout=0.1, batch_first=True)
+        self.transformer_2 = torch.nn.TransformerEncoderLayer(d_model=d_latent, nhead=4, dim_feedforward=256, dropout=0.1, batch_first=True)
         self.transformer = torch.nn.TransformerEncoderLayer(d_model=d_latent, nhead=8, dim_feedforward=512, dropout=0.1, batch_first=True)
+        self.linear_layer = torch.nn.Linear(d_latent, n_tokens)
         self.output_proj = torch.nn.Linear(d_latent, n_tokens)
 
     def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, dict[str, torch.Tensor]]:
         if len(x.shape) == 4:
-            tokenizer = bsq.load()
-            x = tokenizer.encode_index(x.float() / 254.5)
+            x = bsq.load().encode_index(x.float() / 254.5)
         if len(x.shape) == 2:
             x = x.unsqueeze(0)
         B, h, w = x.shape
         embedded = self.embedding(torch.nn.functional.pad(x.reshape(B, -1)[:, :-1], (1, 0), value=0))
+        # transformed_3 = self.transformer_3(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(h * w).to(x.device))
+        # transformed_2 = self.transformer_2(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(h * w).to(x.device))
         transformed = self.transformer(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(h * w).to(x.device))
-        output = self.output_proj(transformed)
+        output = self.linear_layer(transformed)
         return output.reshape(B, h, w, -1), {}
 
     def generate(self, B: int = 1, h: int = 30, w: int = 20, device=None) -> torch.Tensor:
-        if device is None:
-            device = next(self.parameters()).device
         t = h * w
         zeroes = torch.zeros((B, t), dtype=torch.long, device=device)
         for i in range(t):
             embedded = self.embedding(torch.nn.functional.pad(zeroes[:, :i+1], (0, t - i-1), value=0))
+            # transformed_3 = self.transformer_3(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(t).to(device))
+            # transformed_2 = self.transformer_2(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(t).to(device))
             transformed = self.transformer(embedded, src_mask=torch.nn.Transformer.generate_square_subsequent_mask(t).to(device))
-            zeroes[:, i] = torch.multinomial(torch.nn.functional.softmax(self.output_proj(transformed[:, i, :]), dim=-1), 1).squeeze(-1)
+            zeroes[:, i] = torch.multinomial(torch.nn.functional.softmax(self.linear_layer(transformed[:, i, :]), dim=-1), 1).squeeze(-1)
         return zeroes.reshape(B, h, w)
